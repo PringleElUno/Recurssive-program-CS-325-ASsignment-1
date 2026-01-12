@@ -1,6 +1,4 @@
-import unittest
-
-def evaluteString(input):
+def evaluateString(input):
     """
     Recursviely evaluating a expression containing only positive integers
     and '+' to use the correct operand.
@@ -19,4 +17,4 @@ def evaluteString(input):
     left_part_of_expression = input[:index] # just simple code for everything before the plus sign
     right_number_of_expression = int(input[index + 1:]) # any number that is after the plus sign
 
-    return evaluteString(left_part_of_expression) + right_number_of_expression # Just a return to get that crrect algorithim answer
+    return evaluateString(left_part_of_expression) + right_number_of_expression # Just a return to get that crrect algorithim answer
