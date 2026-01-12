@@ -15,6 +15,6 @@ def evaluteString(input):
     while input[input] != '+': # We create a loop 
         index -= 1 
 
-    left_part_of_expression = input[:idex]
+    left_part_of_expression = input[:index]
     right_number_of_expression = int(input[:index + 1:])
 
