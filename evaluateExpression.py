@@ -11,10 +11,11 @@ def evaluteString(input):
         return int(input) # we return that input that the user created as an integer of course
     
     # We developr our recursive case here
-    index = len(input) - 1  # whatever the user input is it will be subtracted by 1
-    while input[input] != '+': # We create a loop 
+    index = len(input) - 1  # whatever the user input is it will be subtracted by 1, so we have a pointer that starts at the last character
+    while input[index] != '+': # We create a loop and it will continue to move left till '+' is found 
         index -= 1 
 
-    left_part_of_expression = input[:index]
-    right_number_of_expression = int(input[:index + 1:])
+    left_part_of_expression = input[:index] # just simple code for everything before the plus sign
+    right_number_of_expression = int(input[index + 1:]) # any number that is after the plus sign
 
+    return evaluteString(left_part_of_expression) + right_number_of_expression # Just a return to get that crrect algorithim answer
