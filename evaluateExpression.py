@@ -15,6 +15,7 @@ def evaluteString(input):
     while input[index] != '+': # We create a loop and it will continue to move left till '+' is found 
         index -= 1 
 
+    # Overall the loop goes from right to left untill it finds that addition operand and then splits the code into smaller recursive sub problems
     left_part_of_expression = input[:index] # just simple code for everything before the plus sign
     right_number_of_expression = int(input[index + 1:]) # any number that is after the plus sign
 
